@@ -42,7 +42,7 @@ class Parent extends Person {
     }
 
     getChildMarks(child) {
-        console.log('Name: ' + child.name + ';\nMarks: ' + child.marks);
+        return `Name: ${child.name};\nMarks: ${child.marks}`
     }
 }
 
