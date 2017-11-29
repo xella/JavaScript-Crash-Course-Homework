@@ -1,0 +1,41 @@
+extends layout
+
+block content
+
+  h1 List of all people (parents, children, teachers)
+  div There are #{children.length} children added.
+  //div There are #{parents.length} parents added.
+  //div There are #{teachers.length} teachers added.
+
+  if children || parents || teachers
+    if children
+      p Children:
+      table
+        each child in children
+          tr
+            td #{child.name}
+            td #{child.age}
+            td #{child.marks}
+            td #{child.subjects}
+
+    if parents
+      p Parents:
+      table
+        each parent in parents
+          tr
+            td #{parent.name}
+            td #{parent.age}
+            td #{parent.children}
+
+    if teachers
+      p Teachers:
+      table
+        each teacher in teachers
+          tr
+            td #{teacher.name}
+            td #{teacher.age}
+            td #{teacher.subject}
+  else
+    p Nothing to show :(
+
+
