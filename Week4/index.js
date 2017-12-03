@@ -39,8 +39,8 @@ app.post('/children', async (req, res, next) => {
 // View a child profile by Id
 // GET /children/:id
 app.get('/children/:id', async (req, res, next) => {
-  const person = await ChildService.find(req.params.id)
-  res.render('person-detail', {person})
+  const child = await ChildService.find(req.params.id)
+  res.render('person-detail', {child})
 })
 
 // Remove a child
@@ -63,8 +63,8 @@ app.post('/parents', async (req, res, next) => {
 // View a parent profile by Id
 // GET /parents/:id
 app.get('/parents/:id', async (req, res, next) => {
-  const person = await ParentService.find(req.params.id)
-  res.render('person-detail', {person})
+  const parent = await ParentService.find(req.params.id)
+  res.render('person-detail', {parent})
 })
 
 // Remove a parent
@@ -85,8 +85,8 @@ app.post('/teachers', async (req, res, next) => {
 // View a teacher profile by Id
 // GET /teachers/:id
 app.get('/teachers/:id', async (req, res, next) => {
-  const person = await TeacherService.find(req.params.id)
-  res.render('person-detail', {person})
+  const teacher = await TeacherService.find(req.params.id)
+  res.render('person-detail', {teacher})
 })
 
 // Remove a teacher
